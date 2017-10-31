@@ -9,6 +9,8 @@
 class PID{
  private:
 
+  // will have a function which reports the current error 
+  
   // the proportional term of the controller
   double p;
   
@@ -18,6 +20,15 @@ class PID{
   // the integral term of the controller
   double i;
 
+  // a ringbuffer which is used to calculate what the error of each dimension is 
+  double* errors; // a buffer for storeing recent errors that we have observed
+  int errorBufferLength; // the number of elements that the buffer has been defined for 
+  int errorBufferPoint; // where we are in the error buffer
+
+  // we have two options for how the pid controller can get information, sensors could send it information or it can pull information from the world or wait for a callback
+  // TODO figure out how to get information in
+
+
  public:
 
   PID(double p, double i, double d) {
@@ -25,7 +36,7 @@ class PID{
     this.p = p;
     this.d = d;
     this.i = i;
-
+    
   }
 
 };

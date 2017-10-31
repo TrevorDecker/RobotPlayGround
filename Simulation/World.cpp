@@ -5,7 +5,7 @@
 
 #include <stddef.h>
 #include <vector>
-#include "Objects.h"
+#include "Object.h"
 
 class World{
   
@@ -15,7 +15,7 @@ private:
   static World* worldPointer;
 
   // stores the elements that are a part of the world
-  std::vector<Objects> objectList;
+  std::vector<Object> objectList;
 
   // constructor for the world
   World(){
@@ -36,11 +36,11 @@ public:
     // TODO
   }
 
-  //TODO add some geters and equality and ability to remove objects 
+  bool removeObject(Object* objectToRemove) {
+    // TODO
+  }
 
-
-
-  
-
+  // TODO add some geters and equality 
+  // TODO add a drawing class that I can use to have a basic display
 
 };
