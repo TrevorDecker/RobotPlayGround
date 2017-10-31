@@ -1,6 +1,6 @@
 This project is an exercise to develope a clean,minimal,use case robotic application refrence library for robotic applications.  For an actual live robot I suggest that the user explore other libraries which have been optimized for results on live robots ie (ROS).  This library is behing optimized for explanning concepts  and ease of use. 
 
-Any questions can be directed to Trevor at my  email: Trevor.Decker@gmail.com
+Any questions can be directed to Trevor at my  email: MR.Trevor.Decker@gmail.com
 
 
 The top level sections of this library are:
