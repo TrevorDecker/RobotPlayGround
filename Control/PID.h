@@ -6,6 +6,11 @@
   // it would also be nice to have this controller expand into a general purpose controller block digram frame work 
   // it would also be worth exploreing continues time implementaions
 
+#ifndef _PID_H_
+#define _PID_H_
+
+#include "PID.h"
+
 class PID{
  private:
 
@@ -33,10 +38,12 @@ class PID{
 
   PID(double p, double i, double d) {
     // TODO add interface for controlling an actuator, and getting sensor information back
-    this.p = p;
-    this.d = d;
-    this.i = i;
+    this->p = p;
+    this->d = d;
+    this->i = i;
     
   }
 
 };
+
+#endif  // _PID_H_

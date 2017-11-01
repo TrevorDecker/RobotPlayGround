@@ -3,8 +3,12 @@
 
 #include <iostream>
 #include "../Simulation/World.cpp"
+#include "../Simulation/PointRobot.h"
+#include "../Control/PID.h"
+#include "../Estimation/State.h"
 
 #include <glut.h>
+#include <math.h>
 
 
 void displayMe(void)
@@ -21,14 +25,21 @@ void displayMe(void)
   */
 }
 
+
 int main(int argc, char** argv) {
-  double* state = new double[3]();
+  PointRobot r = PointRobot(0.0,0.0,0.0);
+  for(int i = 0;i<10;i++) { 
+    r.move(1.0,0.0);
+    std::cout<<r.toString()<<std::endl;
+  }
+  
+  // TODO build the robot class and collapse move into it
   
   // sets the start state
   // variable 1 is x, variable 2 is y, variable 3 is th
-  state[0] = 0.0;
-  state[1] = 0.0;
-  state[2] = 0.0;
+  //  state[0] = 0.0;
+  //  state[1] = 0.0;
+  //  state[2] = 0.0;
 
 
   /*
